@@ -141,13 +141,13 @@ else
 		<?php if ($this->params->get('sitedescription')) { echo '<div class="site-description">'. htmlspecialchars($this->params->get('sitedescription')) .'</div>'; } ?>
 		</div>
 						
-				<jdoc:include type="modules" name="position-1" />
+				
 	
 			
 			
-				<div class="header-inner"><div class="clearfix"></div>
+				<div class="header-inner">
 
-						
+					<jdoc:include type="modules" name="position-1" />	
 					<div class="header-search pull-right">
 						<jdoc:include type="modules" name="position-0" style="none" />
 					</div>

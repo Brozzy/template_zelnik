@@ -49,11 +49,11 @@
 	<config>
 		<fields name="params">
 			<fieldset name="advanced">
-				<field name="templateColor" class="" type="color" default="#08C"
+				<field name="templateColor" class="" type="color" default="#397EC3"
 					label="TPL_ZELNIK_COLOR_LABEL"
 					description="TPL_ZELNIK_COLOR_DESC" />
 
-				<field name="templateBackgroundColor" class="" type="color" default="#F4F6F7"
+				<field name="templateBackgroundColor" class="" type="color" default="#397EC3"
 					label="TPL_ZELNIK_BACKGROUND_COLOR_LABEL"
 					description="TPL_ZELNIK_BACKGROUND_COLOR_DESC" />
 
