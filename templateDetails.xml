@@ -45,6 +45,8 @@
 	<languages folder="language">
 		<language tag="en-GB">en-GB/en-GB.tpl_zelnik.ini</language>
 		<language tag="en-GB">en-GB/en-GB.tpl_zelnik.sys.ini</language>
+		<language tag="en-GB">sl-SI/sl-SI.tpl_zelnik.ini</language>
+		<language tag="en-GB">sl-SI/sl-SI.tpl_zelnik.sys.ini</language>
 	</languages>
 	<config>
 		<fields name="params">

@@ -132,19 +132,15 @@ else
 <body class="site <?php echo $option . " view-" . $view . " layout-" . $layout . " task-" . $task . " itemid-" . $itemid . " ";?> <?php if ($this->params->get('fluidContainer')) { echo "fluid"; } ?>">
 	
 	<!-- Body -->
-	<div class="body">
+	<div class="body">	
+	<div class="container<?php if ($this->params->get('fluidContainer')) { echo "-fluid"; } ?>">
 		
 			<!-- Header -->
 		<div class="header">	
 	
 		<div class="logo"><?php echo '<a href="'.$this->baseurl .'">'. $logo .'</a>'; ?>
 		<?php if ($this->params->get('sitedescription')) { echo '<div class="site-description">'. htmlspecialchars($this->params->get('sitedescription')) .'</div>'; } ?>
-		</div>
-						
-				
-	
-			
-			
+		</div>			
 				<div class="header-inner">
 
 					<jdoc:include type="modules" name="position-1" />	
@@ -154,23 +150,10 @@ else
 					
 				</div>
 				</div>
-				<div class="trava">
-				<div class="container">
-			
+					
 
 			<jdoc:include type="modules" name="banner" style="xhtml" />
 			<div class="row-fluid">
-				<?php if ($this->countModules('position-8')): ?>
-				
-				<!-- Begin Sidebar -->
-				<div id="sidebar" class="span3">
-					<div class="sidebar-nav">
-						<jdoc:include type="modules" name="position-8" style="xhtml" />
-					</div>
-				
-				
-				<!-- End Sidebar -->
-				<?php endif; ?>
 				<div id="content" class="<?php echo $span;?>">
 					<!-- Begin Content -->
 					<jdoc:include type="modules" name="position-3" style="xhtml" />
@@ -179,10 +162,7 @@ else
 					<jdoc:include type="modules" name="position-2" style="none" />
 					<!-- End Content -->
 				</div>
-				</div>
-				</div>
-			</div>
-			<div class="container-right">
+							
 				<?php if ($this->countModules('position-7')) : ?>
 				<div id="aside" class="span3">
 					<!-- Begin Right Sidebar -->
@@ -191,8 +171,8 @@ else
 				</div>
 				<?php endif; ?>
 			
-		
-
+			</div>
+	</div>
 	</div>
 	<!-- Footer -->
 	<jdoc:include type="modules" name="debug" style="none" />
@@ -200,6 +180,8 @@ else
 			<jdoc:include type="modules" name="footer" style="none" />
 			
 			&copy; <?php echo $sitename; ?> <?php echo date('Y');?>
+
+
 	</div>
 </body>
 </html>

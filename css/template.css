@@ -175,7 +175,6 @@ a:hover {
 	float: left;
 	margin-left: 20px;
 }
-.container,
 .navbar-static-top .container,
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
@@ -255,7 +254,7 @@ a:hover {
 }
 .row-fluid {
 	width: 100%;
-	*zoom: 1;
+	padding-top: 10px;
 }
 .row-fluid:before,
 .row-fluid:after {
@@ -4306,9 +4305,6 @@ a.badge:hover {
 	.dl-horizontal dd {
 		margin-left: 0;
 	}
-	.container {
-		width: auto;
-	}
 	.row-fluid {
 		width: 100%;
 	}
@@ -6017,13 +6013,6 @@ body.site {
 	background-attachment: fixed;
 	}
 	
-.trava{
-max-width: 960px;
-margin-left: auto;
-margin-right: auto;
-margin-top: 10px;
-
-}
 
 body.site.fluid {
 	background-color: #ffffff;
@@ -6041,6 +6030,7 @@ background-image: url('../images/grass.png');
 padding-top: 24px;
 background-repeat: repeat-x;
 width: 100%;
+
 
 
 
@@ -6073,7 +6063,7 @@ select[size] {
 	text-decoration: none;
 }
 .header {
-	width: 960px;
+	width: 100%;
 	margin-right: auto;
 	margin-left: auto;
 	
@@ -6106,10 +6096,14 @@ background-repeat: repeat-x;
 width: 100%;
 
 }
-
-.container-right,
- .container {
- background-repeat: repeat-x;
+.container {
+margin-right: auto;
+margin-left: auto;
+max-width: 960px;
+}
+#aside,
+ #content{
+ *background-repeat: repeat-x;
   *filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#22FFFBD6", endColorstr="#FFFFFBD6");
   background-image: -khtml-gradient(linear, left top, left bottom, from(rgba(255, 251, 214, 0)), to(rgba(255, 251, 214, 1)));
   background-image: -moz-linear-gradient(top, rgba(255, 251, 214, 0), rgba(255, 251, 214, 1));
@@ -6121,10 +6115,10 @@ width: 100%;
  background-image: -o-linear-gradient(top, rgba(255, 251, 214, 0), rgba(255, 251, 214, 1));
   background-image: linear-gradient(rgba(255, 251, 214, 0), rgba(255, 251, 214, 1));
   background-position: bottom;
-	background-attachment: fixed;
+  background-attachment: fixed;
  }
- .container{
- 	max-width: 570px;
+ #content{
+ 	max-width: 610px;
 	*background-color: #FFFBD6;
 	-moz-border-radius: 0px 20px 0 0px;
 	-webkit-border-radius: 0px 20px 0 0px;
@@ -6138,15 +6132,15 @@ width: 100%;
 	box-shadow: 0px 0px 6px rgba(0,0,0,0.05); */
 
 }
-.container-right{
+#aside{
 *background-color: #FFFBD6;
 	-moz-border-radius: 20px 0px 0 0px;
 	-webkit-border-radius: 20px 0 0 0px;
 	border-radius: 20px 0 0 0px;
-	padding: 10px;
-	max-width: 340px;
+	padding: 20px;
+	width: 340px;
 	margin-right: 0;
-	margin-left: auto;
+	margin-left: 10px;
 	/* border: 1px solid rgba(0,0,0,0.15);
 	-moz-box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
 	-webkit-box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
@@ -6486,8 +6480,6 @@ h6 {
 	}
 }
 
-
-
 .main {
     padding-top: 10px;
     padding-bottom: 20px;
@@ -6495,7 +6487,7 @@ h6 {
 
 }
 .nav{
-		height: 30px;
+		height: auto;
 		float: none;
 		width: 100%;
 	}
@@ -6518,7 +6510,7 @@ h6 {
 	text-align: center;
 	display: block;
 	margin: 0;
-	padding: 0;
+	padding: 3px 0;
 
 }
 .header ul.menu li {
@@ -6536,6 +6528,6 @@ h6 {
 	display: inline-block;
 	margin: 0;
 	position: relative;
-	padding: 6px 20px 0 20px;
+	padding: 3px 20px 3px 20px;
 	font-family: Arial;
 	
