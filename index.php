@@ -152,8 +152,10 @@ else
 				</div>
 					
 
-			<jdoc:include type="modules" name="banner" style="xhtml" />
 			<div class="row-fluid">
+				<div id="glavno-okno">
+				<div id="rob-levi">
+				</div>
 				<div id="content" class="<?php echo $span;?>">
 					<!-- Begin Content -->
 					<jdoc:include type="modules" name="position-3" style="xhtml" />
@@ -162,16 +164,21 @@ else
 					<jdoc:include type="modules" name="position-2" style="none" />
 					<!-- End Content -->
 				</div>
-							
+				<div id="rob-desni">
+				</div>
+				</div>
 				<?php if ($this->countModules('position-7')) : ?>
+				<div id="rob-levi-right">
+				</div>
 				<div id="aside" class="span3">
 					<!-- Begin Right Sidebar -->
 					<jdoc:include type="modules" name="position-7" style="well" />
 					<!-- End Right Sidebar -->
+				</div>			
+				<div id="rob-desni-right">
 				</div>
 				<?php endif; ?>
 			
-			</div>
 	</div>
 	</div>
 	<!-- Footer -->
