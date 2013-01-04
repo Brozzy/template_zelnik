@@ -88,7 +88,7 @@
 					label="TPL_ZELNIK_FONT_NAME_LABEL"
 					description="TPL_ZELNIK_FONT_NAME_DESC" />
 
-				<field name="fluidContainer"
+<!-- 				<field name="fluidContainer"
 					type="radio"
 					class="btn-group"
 					default="0"
@@ -97,7 +97,7 @@
 				>
 					<option value="0">TPL_ZELNIK_STATIC</option>
 					<option value="1">TPL_ZELNIK_FLUID</option>
-				</field>
+				</field> -->
 			</fieldset>
 		</fields>
 	</config>

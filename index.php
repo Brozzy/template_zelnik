@@ -133,7 +133,7 @@ else
 	
 	<!-- Body -->
 	<div class="body">	
-	<div class="container<?php if ($this->params->get('fluidContainer')) { echo "-fluid"; } ?>">
+	<div class="container">
 		
 			<!-- Header -->
 		<div class="header">	
@@ -177,13 +177,19 @@ else
 				</div>			
 				<div id="rob-desni-right">
 				</div>
+				
 				<?php endif; ?>
 			
 	</div>
+	
 	</div>
+	<div id="element">
+		</div>
 	<!-- Footer -->
 	<jdoc:include type="modules" name="debug" style="none" />
-	<div class="footer">
+	
+		<div class="footer">
+		
 			<jdoc:include type="modules" name="footer" style="none" />
 			
 			&copy; <?php echo $sitename; ?> <?php echo date('Y');?>
