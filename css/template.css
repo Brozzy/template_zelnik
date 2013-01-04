@@ -252,8 +252,9 @@ a:hover {
 .row-fluid {
 	width: 960px;
 	padding-top: 10px;
-	margin-left: auto;
+	margin-left: 170px;
 	margin-right: auto;
+	float: left;
 }
 .row-fluid:before,
 .row-fluid:after {
@@ -5112,7 +5113,8 @@ bottom: 20px;
 background-image: url('../images/zajec.png');
 height: 100px;
 width: 83px;
-right: 120px;
+margin-right: auto;
+margin-left: 1140px;
 }
 
 .thumbnail {
@@ -5144,7 +5146,7 @@ select[size] {
 .header {
 	width: 960px;
 	margin-right: auto;
-	margin-left: auto;
+	margin-left: 170px;
 	
 } 
 .header .finder {
