@@ -5106,15 +5106,13 @@ width: 100%;
 }
 
 #element {
-vertical-align: baseline;
+float: left;
 position: fixed;
-bottom: 0px;
+bottom: 20px;
 background-image: url('../images/zajec.png');
 height: 100px;
-padding-top: 20px;
 width: 83px;
-margin-left:auto;
-margin-right:auto;
+right: 120px;
 }
 
 .thumbnail {
@@ -5182,6 +5180,16 @@ margin-right: auto;
 margin-left: auto;
 max-width: 1300px;
 }
+#leva-reklama {
+background-image: url('../images/advertise-160x600.png');
+float: left;
+position: fixed;
+bottom: 30px;
+	width: 160px;
+	height: 600px;
+	margin-right: 10px;
+}
+
 #content{
 float: left;
 position: relative;

@@ -151,7 +151,8 @@ else
 				</div>
 				</div>
 					
-
+			<div id="leva-reklama">
+			</div>
 			<div class="row-fluid">
 				<div id="glavno-okno">
 				<div id="rob-levi">
@@ -181,10 +182,10 @@ else
 				<?php endif; ?>
 			
 	</div>
-	
-	</div>
 	<div id="element">
 		</div>
+	</div>
+	
 	<!-- Footer -->
 	<jdoc:include type="modules" name="debug" style="none" />
 	
