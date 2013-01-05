@@ -161,12 +161,15 @@ else
 	<div class="container">
 		
 			<!-- Header -->
-		<div class="header">	
+		
 	
 		<div class="logo"><?php echo '<a href="'.$this->baseurl .'">'. $logo .'</a>'; ?>
 		<?php if ($this->params->get('sitedescription')) { echo '<div class="site-description">'. htmlspecialchars($this->params->get('sitedescription')) .'</div>'; } ?>
-		</div>			
-				<div class="sticky" id="header-inner">
+		</div>	
+		
+		<div class="sticky" id="okno">
+		<div class="header">	
+				
 
 					<jdoc:include type="modules" name="position-1" />	
 					<div class="header-search pull-right">
@@ -174,27 +177,22 @@ else
 					</div>
 					
 				</div>
-				</div>
+				
 					
 			<div id="leva-reklama">
 			</div>
 			<div class="row-fluid">
+			
 				<div id="glavno-okno">
 				<div id="rob-levi">
 				</div>
-				<div id="content" class="<?php echo $span;?>">
-					<!-- Begin Content -->
-					<jdoc:include type="modules" name="position-3" style="xhtml" />
-					<jdoc:include type="message" />
-					<jdoc:include type="component" />
-					<jdoc:include type="modules" name="position-2" style="none" />
-					<!-- End Content -->
+				<div class="sredina">
 				</div>
 				<div id="rob-desni">
 				</div>
 				</div>
-				<div id="testnidesni">
-				<div id="sidebar" class="sticky">
+				<div id="desno-okno">
+				<div id="sidebar" >
 				<?php if ($this->countModules('position-7')) : ?>
 				<div id="rob-levi-right">
 				</div>
@@ -207,11 +205,21 @@ else
 				</div>
 				</div>
 				</div>
-				<?php endif; ?>
-			
+				
+			</div>
 	</div>
+	<div id="content" class="<?php echo $span;?>">
+					<!-- Begin Content -->
+					<jdoc:include type="modules" name="position-3" style="xhtml" />
+					<jdoc:include type="message" />
+					<jdoc:include type="component" />
+					<jdoc:include type="modules" name="position-2" style="none" />
+					<!-- End Content -->
+				</div>
+				<?php endif; ?>
 	<div id="element">
 		</div>
+		
 	</div>
 	
 	<!-- Footer -->
