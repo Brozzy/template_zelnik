@@ -134,10 +134,10 @@ else
 		      var windowTop = $(window).scrollTop(); // returns number 
 
 		      if (stickyTop < windowTop){
-		        $('.sticky').css({ position: 'fixed'});
+		        $('.sticky').css({ position: 'fixed',top: 0});
 		      }
 		      else {
-		        $('.sticky').css('position','static');
+		        $('.sticky').css({ position: 'absolute',top: '179px'});
 		      }
 
 		    });

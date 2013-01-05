@@ -254,8 +254,7 @@ a:hover {
 	padding-top: 10px;
 	margin-left: 170px;
 	margin-right: auto;
-	float: left;
-	top: 50px;
+
 }
 .row-fluid:before,
 .row-fluid:after {
@@ -5223,7 +5222,8 @@ position: relative;
 z-index: 2;
 margin: 0px auto auto 200px;
 width: 550px;
-position: relative;
+position: absolute;
+height: 0;
 }
 #rob-levi {
 float: left;
@@ -5262,8 +5262,9 @@ height: 820px;
 top: 0;
 }
 #okno {
-top: 0px;
+top: 179px;
 padding-top: 10px;
+position: absolute;
 }
 #glavno-okno {
 float: left;
