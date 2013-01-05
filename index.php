@@ -121,6 +121,31 @@ else
 			box-shadow: 0 1px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 30px 10px rgba(0, 0, 0, .2);
 		}
 	</style>
+	<script src="templates/zelnik/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(function(){ // document ready
+
+		  if (!!$('.sticky').offset()) { // make sure ".sticky" element exists
+
+		    var stickyTop = $('.sticky').offset().top; // returns number 
+
+		    $(window).scroll(function(){ // scroll event
+
+		      var windowTop = $(window).scrollTop(); // returns number 
+
+		      if (stickyTop < windowTop){
+		        $('.sticky').css({ position: 'fixed'});
+		      }
+		      else {
+		        $('.sticky').css('position','static');
+		      }
+
+		    });
+
+		  }
+
+		});
+	</script>
 	<?php
 	}
 	?>
@@ -141,7 +166,7 @@ else
 		<div class="logo"><?php echo '<a href="'.$this->baseurl .'">'. $logo .'</a>'; ?>
 		<?php if ($this->params->get('sitedescription')) { echo '<div class="site-description">'. htmlspecialchars($this->params->get('sitedescription')) .'</div>'; } ?>
 		</div>			
-				<div class="header-inner">
+				<div class="sticky" id="header-inner">
 
 					<jdoc:include type="modules" name="position-1" />	
 					<div class="header-search pull-right">
@@ -168,6 +193,8 @@ else
 				<div id="rob-desni">
 				</div>
 				</div>
+				<div id="testnidesni">
+				<div id="sidebar" class="sticky">
 				<?php if ($this->countModules('position-7')) : ?>
 				<div id="rob-levi-right">
 				</div>
@@ -178,7 +205,8 @@ else
 				</div>			
 				<div id="rob-desni-right">
 				</div>
-				
+				</div>
+				</div>
 				<?php endif; ?>
 			
 	</div>

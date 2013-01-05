@@ -5086,7 +5086,7 @@ body.site {
 	background-position: bottom;
 	background-attachment: fixed;
 	}
-	
+
 
 body.site.fluid {
 	background-color: #ffffff;
@@ -5107,7 +5107,6 @@ width: 100%;
 }
 
 #element {
-float: left;
 position: fixed;
 bottom: 20px;
 background-image: url('../images/zajec.png');
@@ -5147,7 +5146,7 @@ select[size] {
 	width: 960px;
 	margin-right: auto;
 	margin-left: 170px;
-	
+
 } 
 .header .finder {
 	margin-top: 14px;
@@ -5201,9 +5200,10 @@ position: relative;
 
 #aside,
  #content{	
+ float: left;
 	background-image: url('../images/gradient.png');
 	background-repeat: repeat-x;
-	height: 820px;
+	height: 100%;
 	width: 100%;
 	padding-top: 20px;
 }
@@ -5256,8 +5256,22 @@ position: relative;
 	-moz-box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
 	-webkit-box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
 	box-shadow: 0px 0px 6px rgba(0,0,0,0.05); */
-	
+
 	}
+	
+	#sidebar {
+	float:right;
+	width:340px;
+	top: 50px;
+}
+	#testnidesni {
+	float:right;
+	width:340px;
+}
+#header-inner{
+top: 10px;
+width: 960px;
+}
 
 .well .page-header {
 	margin: 0px 0px 5px 0px;
@@ -5641,4 +5655,3 @@ h6 {
 	position: relative;
 	padding: 3px 20px 3px 20px;
 	font-family: Arial;
-	
