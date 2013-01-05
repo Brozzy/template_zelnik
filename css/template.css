@@ -5203,6 +5203,7 @@ height: 80px;
 margin-right: auto;
 margin-left: auto;
 max-width: 1300px;
+
 }
 #leva-reklama {
 background-image: url('../images/advertise-160x600.png');
@@ -5226,15 +5227,18 @@ position: relative;
  float: left;
 	background-image: url('../images/gradient.png');
 	background-repeat: repeat-x;
-	height: 820px;
+	height: 100%;
 	width: 100%;
 	padding-top: 20px;
 }
+
 #content {
 z-index: 2;
-margin: 0px auto auto 200px;
-width: 550px;
+margin: 70px auto auto 200px;
+width: 560px;
 position: absolute;
+overflow: auto;
+padding-top: 70px;
 }
 #rob-levi {
 float: left;
@@ -5242,7 +5246,7 @@ vertical-align: baseline;
 position: relative;
 background-image: url('../images/grad-rob-levi.png');
 width: 20px;
-height: 820px;
+height: 100%;
 top: 0;
 }
 #rob-desni {
@@ -5251,7 +5255,7 @@ vertical-align: baseline;
 position: relative;
 background-image: url('../images/grad-rob-desni.png');
 width: 20px;
-height: 820px;
+height: 100%;
 top: 0;
 }
 #rob-levi-right {
@@ -5260,7 +5264,7 @@ vertical-align: baseline;
 position: relative;
 background-image: url('../images/grad-rob-levi-right.png');
 width: 20px;
-height: 820px;
+height: 100%;
 top: 0;
 }
 #rob-desni-right {
@@ -5269,19 +5273,21 @@ vertical-align: baseline;
 position: relative;
 background-image: url('../images/grad-rob-desni-right.png');
 width: 20px;
-height: 820px;
+height: 100%;
 top: 0;
 }
 #okno {
 top: 187px;
 padding-top: 10px;
 position: absolute;
+
 }
 #glavno-okno {
 float: left;
 width: 620px;
 position: relative;
 top: 0;
+height: 100%;
 }
 #aside{
 position: relative;
@@ -5296,12 +5302,14 @@ position: relative;
 	#desno-okno {
 	float:right;
 	width:340px;
+	height: 100%;
 	
 }
 	#sidebar {
 	float:right;
 	width:340px;
 	top: 50px;
+	height: 100%
 }
 #header-inner{
 top: 10px;

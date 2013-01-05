@@ -143,8 +143,12 @@ else
 		    });
 
 		  }
-
+		 // višina okna 
+		$(".row-fluid").css("height", (window.innerHeight - 70) + "px");
+		$("#content").css("height", (window.innerHeight - 140) + "px");
 		});
+		
+		
 	</script>
 	<?php
 	}
@@ -167,7 +171,7 @@ else
 		<?php if ($this->params->get('sitedescription')) { echo '<div class="site-description">'. htmlspecialchars($this->params->get('sitedescription')) .'</div>'; } ?>
 		</div>	
 		
-		<div id="okno" class="sticky" >
+		<div id="okno"  >
 		<!-- Header -->
 		<div class="header">	
 				
@@ -229,6 +233,7 @@ else
 	</div>
 		<div class="footer"></div>
 			<div class="footer-text">
+
 			&copy; <?php echo $sitename; ?> <?php echo date('Y');?>
 			</div>
 
