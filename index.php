@@ -160,14 +160,15 @@ else
 	<div class="body">	
 	<div class="container">
 		
-			<!-- Header -->
-		
+			
+		<!-- Logo -->
 	
 		<div class="logo"><?php echo '<a href="'.$this->baseurl .'">'. $logo .'</a>'; ?>
 		<?php if ($this->params->get('sitedescription')) { echo '<div class="site-description">'. htmlspecialchars($this->params->get('sitedescription')) .'</div>'; } ?>
 		</div>	
 		
-		<div class="sticky" id="okno">
+		<div id="okno" class="sticky" >
+		<!-- Header -->
 		<div class="header">	
 				
 
