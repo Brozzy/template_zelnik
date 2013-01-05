@@ -137,7 +137,7 @@ else
 		        $('.sticky').css({ position: 'fixed',top: 0});
 		      }
 		      else {
-		        $('.sticky').css({ position: 'absolute',top: '179px'});
+		        $('.sticky').css({ position: 'absolute',top: '187px'});
 		      }
 
 		    });
@@ -224,15 +224,14 @@ else
 	</div>
 	
 	<!-- Footer -->
-	<jdoc:include type="modules" name="debug" style="none" />
 	
-		<div class="footer">
-		
-			<jdoc:include type="modules" name="footer" style="none" />
-			
-			&copy; <?php echo $sitename; ?> <?php echo date('Y');?>
-
-
+	<div id="poden">
 	</div>
+		<div class="footer"></div>
+			<div class="footer-text">
+			&copy; <?php echo $sitename; ?> <?php echo date('Y');?>
+			</div>
+
+	
 </body>
 </html>

@@ -250,10 +250,11 @@ a:hover {
 	margin-left: 100px;
 }
 .row-fluid {
-	width: 960px;
+	*width: 960px;
 	padding-top: 10px;
-	margin-left: 170px;
-	margin-right: auto;
+	*margin-left: 170px;
+	*margin-right: auto;
+	float: right;
 
 }
 .row-fluid:before,
@@ -5106,17 +5107,25 @@ padding-top: 40px;
 padding-bottom: 30px;
 height: 117px;
 }
-.footer{
+.footer {
 position: fixed;
 bottom: 0px;
-text-align: center;
+
+
 background-image: url('../images/grass.png');
-padding-top: 24px;
+height: 40px;
 background-repeat: repeat-x;
 width: 100%;
 z-index: 500;
 }
-
+.footer-text {
+position: fixed;
+bottom: 0px;
+text-align: center;
+vertical-align: bottom;
+width: 100%;
+z-index: 1000;
+}
 #element {
 position: fixed;
 bottom: 20px;
@@ -5179,12 +5188,15 @@ select[size] {
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
 }
 
-.body{
+#poden {
 background-image: url('../images/grass1.png');
+position: fixed;
+bottom: 0px;
+text-align: center;
 background-repeat: repeat-x;
-	background-position: bottom;
-	background-attachment: fixed;
 width: 100%;
+z-index: -1;
+height: 80px;
 
 }
 .container {
@@ -5223,7 +5235,6 @@ z-index: 2;
 margin: 0px auto auto 200px;
 width: 550px;
 position: absolute;
-height: 0;
 }
 #rob-levi {
 float: left;
@@ -5262,7 +5273,7 @@ height: 820px;
 top: 0;
 }
 #okno {
-top: 179px;
+top: 187px;
 padding-top: 10px;
 position: absolute;
 }
