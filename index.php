@@ -123,7 +123,21 @@ else
 	</style>
 		<script src="templates/zelnik/js/js-scrollbars-v2/js/aplweb.scrollbars.js" type="text/javascript"></script>
 	<script src="templates/zelnik/js/jquery-1.7.1.min.js" type="text/javascript"></script>
-	<script type="text/javascript">
+	<!-- styles needed by jScrollPane -->
+<link type="text/css" href="templates/zelnik/css/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+ 
+<!-- latest jQuery direct from google's CDN -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js">
+</script>
+ 
+<!-- the mousewheel plugin - optional to provide mousewheel support -->
+<script type="text/javascript" src="templates/zelnik/js/jquery.mousewheel.js"></script>
+ 
+<!-- the jScrollPane script -->
+<script type="text/javascript" src="templates/zelnik/js/jquery.jscrollpane.min.js"></script>
+<script type="text/javascript">
+		
+		//fixiranje
 		$(function(){ // document ready
 
 		  if (!!$('.sticky').offset()) { // make sure ".sticky" element exists
@@ -144,15 +158,30 @@ else
 		    });
 		  }
 		  });
+		  
+		  
 		 // višina okna 
 		 $(window.onresize = function() {
 		$(".row-fluid").css("height", (window.innerHeight - 70) + "px");
 		$("#content").css("height", (window.innerHeight - 165) + "px");
-		});
 		
-		//scrollbar
-	
+		
+		//skrolanje
+		$(function() {
+    $('.content-area').jScrollPane();
+});
+
+$('.jspDrag').hide();
+$('.jspScrollable').mouseenter(function(){
+    $(this).find('.jspDrag').stop(true, true).fadeIn('slow');
+});
+$('.jspScrollable').mouseleave(function(){
+    $(this).find('.jspDrag').stop(true, true).fadeOut('slow');
+});	
+	});
 	</script>
+	
+
 	<?php
 	}
 	?>
@@ -217,7 +246,7 @@ else
 			</div>
 	</div>
 	
-	<div id="content" class="<?php echo $span;?>">
+	<div id="content" class="<?php echo $span;?> content-area">
 					<!-- Begin Content -->
 					<jdoc:include type="modules" name="position-3" style="xhtml" />
 					<jdoc:include type="message" />
