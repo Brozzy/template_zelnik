@@ -121,6 +121,7 @@ else
 			box-shadow: 0 1px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 30px 10px rgba(0, 0, 0, .2);
 		}
 	</style>
+		<script src="templates/zelnik/js/js-scrollbars-v2/js/aplweb.scrollbars.js" type="text/javascript"></script>
 	<script src="templates/zelnik/js/jquery-1.7.1.min.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		$(function(){ // document ready
@@ -141,14 +142,16 @@ else
 		      }
 
 		    });
-
 		  }
+		  });
 		 // višina okna 
+		 $(window.onresize = function() {
 		$(".row-fluid").css("height", (window.innerHeight - 70) + "px");
-		$("#content").css("height", (window.innerHeight - 140) + "px");
+		$("#content").css("height", (window.innerHeight - 165) + "px");
 		});
 		
-		
+		//scrollbar
+	
 	</script>
 	<?php
 	}
@@ -213,6 +216,7 @@ else
 				
 			</div>
 	</div>
+	
 	<div id="content" class="<?php echo $span;?>">
 					<!-- Begin Content -->
 					<jdoc:include type="modules" name="position-3" style="xhtml" />
@@ -220,7 +224,8 @@ else
 					<jdoc:include type="component" />
 					<jdoc:include type="modules" name="position-2" style="none" />
 					<!-- End Content -->
-				</div>
+				
+</div>  
 				<?php endif; ?>
 	<div id="element">
 		</div>
