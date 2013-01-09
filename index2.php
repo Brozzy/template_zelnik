@@ -35,7 +35,7 @@ else
 JHtml::_('bootstrap.framework');
 
 // Add Stylesheets
-$doc->addStyleSheet('templates/'.$this->template.'/css/template.css');
+$doc->addStyleSheet('templates/'.$this->template.'/css/template2.css');
 
 // Load optional rtl Bootstrap css and Bootstrap bugfixes
 JHtmlBootstrap::loadCss($includeMaincss = false, $this->direction);
@@ -162,8 +162,9 @@ else
 		  
 		 // višina okna 
 		 $(window.onresize = function() {
-		$(".body-background").css("height", (window.innerHeight - 210) + "px");
-		$(".container").css("height", (window.innerHeight - 210) + "px");
+		$(".row-fluid").css("height", (window.innerHeight - 70) + "px");
+		$("#content").css("height", (window.innerHeight - 165) + "px");
+		
 		
 		//skrolanje
 		$(function() {
@@ -189,57 +190,87 @@ $('.jspScrollable').mouseleave(function(){
 	<![endif]-->
 </head>
 
-<body class="site">
-	<!-- Header -->
-	<div class="header">
+<body class="site <?php echo $option . " view-" . $view . " layout-" . $layout . " task-" . $task . " itemid-" . $itemid . " ";?> <?php if ($this->params->get('fluidContainer')) { echo "fluid"; } ?>">
+	
+	<!-- Body -->
+	<div class="body">	
+	<div class="container">
+		
+			
+		<!-- Logo -->
+	
 		<div class="logo"><?php echo '<a href="'.$this->baseurl .'">'. $logo .'</a>'; ?>
 		<?php if ($this->params->get('sitedescription')) { echo '<div class="site-description">'. htmlspecialchars($this->params->get('sitedescription')) .'</div>'; } ?>
-		</div>		
-		<div class="header sticky">
-			<jdoc:include type="modules" name="position-1" />
-			<div class="vrh-levi">
-			<div class="vogal-levi"></div>
-			<div class="sredina"></div>
-			<div class="vogal-desni"></div>
-			</div>
-			<div class="vrh-desni">
-			<div class="vogal-levi"></div>
-			<div class="sredina"></div>
-			<div class="vogal-desni"></div>
-			</div>
-		</div>
-	</div>	
-	<!-- Body -->
-	<div class="body-background"></div>	
-	<div id="leva-reklama"></div>
-	<div class="container">
-	<div id="glavno-okno" class="sticky">
-				<div id="rob-levi"></div>				
-				<div class="sredina"></div>
-				<div id="rob-desni"></div>
-			</div>
-			<div id="desno-okno" class="sticky">
-				<div id="rob-levi-right"></div>
-				<div class="sredina"></div>
+		</div>	
+		
+		<div id="okno"  >
+		<!-- Header -->
+		<div class="header">	
 				
-				<div id="rob-desni-right"></div>
-			</div>	
-		<div id="content">
-				<!-- Begin Content -->
-				<jdoc:include type="modules" name="position-3" style="xhtml" />
-				<jdoc:include type="message" />
-				<jdoc:include type="component" />
-				<jdoc:include type="modules" name="position-2" style="none" />
-				<!-- End Content -->
-		</div> 
+
+					<jdoc:include type="modules" name="position-1" />	
+					<div class="header-search pull-right">
+						<jdoc:include type="modules" name="position-0" style="none" />
+					</div>
+					
+				</div>
+				
+					
+			<div id="leva-reklama">
+			</div>
+			<div class="row-fluid">
 			
+				<div id="glavno-okno">
+				<div id="rob-levi">
+				</div>
+				<div class="sredina">
+				</div>
+				<div id="rob-desni">
+				</div>
+				</div>
+				<div id="desno-okno">
+				<div id="sidebar" >
+				<?php if ($this->countModules('position-7')) : ?>
+				<div id="rob-levi-right">
+				</div>
+				<div id="aside" class="span3">
+					<!-- Begin Right Sidebar -->
+					<jdoc:include type="modules" name="position-7" style="well" />
+					<!-- End Right Sidebar -->
+				</div>			
+				<div id="rob-desni-right">
+				</div>
+				</div>
+				</div>
+				
+			</div>
 	</div>
-	<!-- Footer -->
-	<div class="footer"></div>
-	<div id="front-footer">
-		<div id="footer-text">
-			&copy; <?php echo $sitename; ?> <?php echo date('Y');?>
+	
+	<div id="content" class="<?php echo $span;?> content-area">
+					<!-- Begin Content -->
+					<jdoc:include type="modules" name="position-3" style="xhtml" />
+					<jdoc:include type="message" />
+					<jdoc:include type="component" />
+					<jdoc:include type="modules" name="position-2" style="none" />
+					<!-- End Content -->
+				
+</div>  
+				<?php endif; ?>
+	<div id="element">
 		</div>
+		
 	</div>
+	
+	<!-- Footer -->
+	
+	<div id="poden">
+	</div>
+		<div class="footer"></div>
+			<div class="footer-text">
+
+			&copy; <?php echo $sitename; ?> <?php echo date('Y');?>
+			</div>
+
+	
 </body>
 </html>
