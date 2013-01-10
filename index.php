@@ -110,7 +110,7 @@ else
 			color: <?php echo $this->params->get('templateColor');?>;
 		}
 		.navbar-inner, .nav-list > .active > a, .nav-list > .active > a:hover, .dropdown-menu li > a:hover, .dropdown-menu .active > a, .dropdown-menu .active > a:hover, .nav-pills > .active > a, .nav-pills > .active > a:hover,
-		.btn-primary
+		.btn-primary, 
 		{
 			background: <?php echo $this->params->get('templateColor');?>;
 		}
@@ -203,15 +203,15 @@ $('.jspScrollable').mouseleave(function(){
 				<img src='templates/zelnik/images/home.png' alt='Home'> </a> 
 			</div>
 			<div class="social">
-				<a href="https://www.facebook.com/zelnik.net" target="_blank">
-					<img src='templates/zelnik/images/fb_button.png'  alt='Facebook'> 
-				</a>
-				<a href="https://twitter.com/zelniknet" target="_blank">
-					<img src='templates/zelnik/images/twitter_button.png'  alt='Twitter'> 
-				</a>
-				<a href="http://www.zelnik.net/beta/index.php?format=feed&type=rss" target="_blank">
-					<img src='templates/zelnik/images/rss_button.png'  alt='Twitter'> 
-				</a>
+				<div class="fb">
+					<a href="https://www.facebook.com/zelnik.net" target="_blank"><img /></a>
+				</div>	
+				<div class="twitter">
+				<a href="https://twitter.com/zelniknet" target="_blank"><img /></a>
+				</div>
+				<div class="rss">
+				<a href="http://www.zelnik.net/beta/index.php?format=feed&type=rss" target="_blank"><img /></a>
+				</div>
 			</div>
 			<div class="vrh-levi">
 			<div class="vogal-levi"></div>

@@ -25,6 +25,9 @@ html {
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 }
+a {
+text-decoration:blink;
+}
 a:focus {
 	outline: thin dotted #333;
 	outline: 5px auto -webkit-focus-ring-color;
@@ -131,33 +134,7 @@ body {
 	color: #333;
 	background-color: #fff;
 }
-a {
-	color: #08c;
-	text-decoration: none;
-}
-a:hover {
-	color: #005580;
-	text-decoration: underline;
-}
-.img-rounded {
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
-}
-.img-polaroid {
-	padding: 4px;
-	background-color: #fff;
-	border: 1px solid #ccc;
-	border: 1px solid rgba(0,0,0,0.2);
-	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-.img-circle {
-	-webkit-border-radius: 500px;
-	-moz-border-radius: 500px;
-	border-radius: 500px;
-}
+
 --------------------------------------------------------------------------
 body.site {
 background: #397ec3;
@@ -274,7 +251,37 @@ margin: -29px auto 4px 49px;
 }
 .social {
 margin: -29px 20px 4px auto;
-width: 83px;
+width: 75px;
+height: 25px;
+text-align: right;
+float: right;
+}
+.social .fb  a img{
+content: url('../images/fb_button.png');
+height: 100%;
+background-repeat: no-repeat;
+float: left;
+}
+.social .fb a:hover img{
+content: url('../images/home.png');
+}
+.social .twitter  a img{
+content: url('../images/twitter_button.png');
+height: 100%;
+background-repeat: no-repeat;
+float: left;
+}
+.social .twitter a:hover img{
+content: url('../images/home.png');
+}
+.social .rss  a img{
+content: url('../images/rss_button.png');
+height: 100%;
+background-repeat: no-repeat;
+float: left;
+}
+.social .rss a:hover img{
+content: url('../images/home.png');
 }
 .container {
 width: 960px;
