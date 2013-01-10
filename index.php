@@ -192,11 +192,27 @@ $('.jspScrollable').mouseleave(function(){
 <body class="site">
 	<!-- Header -->
 	<div class="header">
-		<div class="logo"><?php echo '<a href="'.$this->baseurl .'">'. $logo .'</a>'; ?>
-		<?php if ($this->params->get('sitedescription')) { echo '<div class="site-description">'. htmlspecialchars($this->params->get('sitedescription')) .'</div>'; } ?>
+		<div class="logo">
+			<?php echo '<a href="'.$this->baseurl .'">'. $logo .'</a>'; ?>
+			<?php if ($this->params->get('sitedescription')) { echo '<div class="site-description">'. htmlspecialchars($this->params->get('sitedescription')) .'</div>'; } ?>
 		</div>		
-		<div class="header sticky">
+		<div class="header sticky">				
 			<jdoc:include type="modules" name="position-1" />
+			<div class="home">
+				<?php echo '<a href="'.$this->baseurl .'">' ?> 
+				<img src='templates/zelnik/images/home.png' alt='Home'> </a> 
+			</div>
+			<div class="social">
+				<a href="https://www.facebook.com/zelnik.net" target="_blank">
+					<img src='templates/zelnik/images/fb_button.png'  alt='Facebook'> 
+				</a>
+				<a href="https://twitter.com/zelniknet" target="_blank">
+					<img src='templates/zelnik/images/twitter_button.png'  alt='Twitter'> 
+				</a>
+				<a href="http://www.zelnik.net/beta/index.php?format=feed&type=rss" target="_blank">
+					<img src='templates/zelnik/images/rss_button.png'  alt='Twitter'> 
+				</a>
+			</div>
 			<div class="vrh-levi">
 			<div class="vogal-levi"></div>
 			<div class="sredina"></div>
