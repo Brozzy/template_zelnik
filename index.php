@@ -149,7 +149,7 @@ else
 		      var windowTop = $(window).scrollTop(); // returns number 
 
 		      if (stickyTop < windowTop){
-		        $('.sticky').css({ position: 'fixed',top: 0});
+		        $('.sticky').css({ position: 'fixed',top: '10px'});
 		      }
 		      else {
 		        $('.sticky').css({ position: 'absolute',top: '187px'});
@@ -188,7 +188,7 @@ $('.jspScrollable').mouseleave(function(){
 		<script src="<?php echo $this->baseurl ?>/media/jui/js/html5.js"></script>
 	<![endif]-->
 </head>
-
+	
 <body class="site">
 	<!-- Header -->
 	<div class="header">
@@ -211,9 +211,10 @@ $('.jspScrollable').mouseleave(function(){
 	</div>	
 	<!-- Body -->
 	<div class="body-background"></div>	
-	<div id="leva-reklama"></div>
-	<div class="container">
-	<div id="glavno-okno" class="sticky">
+	<div class="body">		
+		<div id="leva-reklama"></div>
+		<div class="container">
+			<div id="glavno-okno" class="sticky">
 				<div id="rob-levi"></div>				
 				<div class="sredina"></div>
 				<div id="rob-desni"></div>
@@ -221,18 +222,18 @@ $('.jspScrollable').mouseleave(function(){
 			<div id="desno-okno" class="sticky">
 				<div id="rob-levi-right"></div>
 				<div class="sredina"></div>
-				
 				<div id="rob-desni-right"></div>
 			</div>	
-		<div id="content">
+			<div id="content">
 				<!-- Begin Content -->
 				<jdoc:include type="modules" name="position-3" style="xhtml" />
 				<jdoc:include type="message" />
 				<jdoc:include type="component" />
 				<jdoc:include type="modules" name="position-2" style="none" />
 				<!-- End Content -->
-		</div> 
-			
+			</div> 	
+		</div>
+		<div id="element"></div>
 	</div>
 	<!-- Footer -->
 	<div class="footer"></div>

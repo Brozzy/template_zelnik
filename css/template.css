@@ -222,6 +222,7 @@ padding-top: 10px;
 position: absolute;
 top: 187px;
 z-index: 2;
+margin-top: -10px;
 }
 .header ul.menu {
 /* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -372,11 +373,6 @@ top: 0;
 float: left;
 width: 620px;
 
-top: 0;
-height: 100%;
-position: absolute;
-top: 187px;
-margin-top: 70px;
 }
 #glavno-okno .sredina {
 width: 570px;
@@ -392,13 +388,29 @@ float: left;
 	background-repeat: repeat-x;
 	height: 100%;
 }
-#desno-okno {
-float: left;
-width: 340px;
-
+#glavno-okno, #desno-okno {
 top: 0;
 height: 100%;
 position: absolute;
 top: 187px;
-margin: 70px auto auto 620px;
+margin-top: 60px
+}
+#desno-okno {
+float: left;
+width: 340px;
+margin-left: 620px
+}
+.body {
+margin-right: auto;
+margin-left: auto;
+max-width: 1300px;
+}
+#element {
+position: fixed;
+bottom: 20px;
+background-image: url('../images/zajec.png');
+height: 100px;
+width: 83px;
+margin-right: auto;
+margin-left: 1140px;
 }
