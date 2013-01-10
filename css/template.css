@@ -153,8 +153,8 @@ background: -webkit-linear-gradient(top, #397ec3 0%,#397ec3 13%,#458acb 23%,#4a9
 background: -o-linear-gradient(top, #397ec3 0%,#397ec3 13%,#458acb 23%,#4a90ce 25%,#4b91cd 27%,#5398d3 30%,#539ad2 31%,#589fd7 33%,#589fd5 34%,#5ba2d8 35%,#60a6da 37%,#60a7db 38%,#67afe1 40%,#6ab2e2 43%,#6db5e5 43%,#6db6e3 44%,#74bde8 47%,#76bfe8 49%,#7dc7ee 52%,#7fc9ee 54%,#84cef3 57%,#87d2f2 60%,#8ed9f9 65%,#8dd8f8 100%); /* Opera 11.10+ */
 background: -ms-linear-gradient(top, #397ec3 0%,#397ec3 13%,#458acb 23%,#4a90ce 25%,#4b91cd 27%,#5398d3 30%,#539ad2 31%,#589fd7 33%,#589fd5 34%,#5ba2d8 35%,#60a6da 37%,#60a7db 38%,#67afe1 40%,#6ab2e2 43%,#6db5e5 43%,#6db6e3 44%,#74bde8 47%,#76bfe8 49%,#7dc7ee 52%,#7fc9ee 54%,#84cef3 57%,#87d2f2 60%,#8ed9f9 65%,#8dd8f8 100%); /* IE10+ */
 background: linear-gradient(to bottom, #397ec3 0%,#397ec3 13%,#458acb 23%,#4a90ce 25%,#4b91cd 27%,#5398d3 30%,#539ad2 31%,#589fd7 33%,#589fd5 34%,#5ba2d8 35%,#60a6da 37%,#60a7db 38%,#67afe1 40%,#6ab2e2 43%,#6db5e5 43%,#6db6e3 44%,#74bde8 47%,#76bfe8 49%,#7dc7ee 52%,#7fc9ee 54%,#84cef3 57%,#87d2f2 60%,#8ed9f9 65%,#8dd8f8 100%); /* W3C */
-position: fixed;
-bottom: 0px;
+position: absolute;
+bottom: -200px;
 background-repeat: repeat-x;
 width: 100%;
 height: 800px;
@@ -250,43 +250,16 @@ li {
 margin: -29px auto 4px 49px;
 }
 .social {
-margin: -29px 20px 4px auto;
-width: 75px;
+margin: -28px 15px auto auto;
+width: 80px;
 height: 25px;
 text-align: right;
 float: right;
 }
-.social .fb  a img{
-content: url('../images/fb_button.png');
-height: 100%;
-background-repeat: no-repeat;
-float: left;
-}
-.social .fb a:hover img{
-content: url('../images/home.png');
-}
-.social .twitter  a img{
-content: url('../images/twitter_button.png');
-height: 100%;
-background-repeat: no-repeat;
-float: left;
-}
-.social .twitter a:hover img{
-content: url('../images/home.png');
-}
-.social .rss  a img{
-content: url('../images/rss_button.png');
-height: 100%;
-background-repeat: no-repeat;
-float: left;
-}
-.social .rss a:hover img{
-content: url('../images/home.png');
-}
 .container {
 width: 960px;
 margin: 60px auto auto auto;
-height: 820px;
+height: 800px;
 }
 #content {
 position: relative;
@@ -355,6 +328,8 @@ position: relative;
 background-image: url('../images/grad-rob.png');
 width: 20px;
 height: 100%;
+	background-size:100% 100%;
+	background-repeat:no-repeat;
 top: 0;
 }
 #rob-desni {
@@ -364,6 +339,8 @@ position: relative;
 background-image: url('../images/grad-rob.png');
 width: 20px;
 height: 100%;
+	background-size:100% 100%;
+	background-repeat:no-repeat;
 top: 0;
 }
 #rob-levi-right {
@@ -373,6 +350,8 @@ position: relative;
 background-image: url('../images/grad-rob.png');
 width: 20px;
 height: 100%;
+	background-size:100% 100%;
+	background-repeat:no-repeat;
 top: 0;
 }
 #rob-desni-right {
@@ -382,6 +361,8 @@ position: relative;
 background-image: url('../images/grad-rob.png');
 width: 20px;
 height: 100%;
+	background-size:100% 100%;
+	background-repeat:no-repeat;
 top: 0;
 }
 #glavno-okno {
@@ -393,15 +374,17 @@ width: 620px;
 width: 570px;
 float: left;
 	background-image: url('../images/gradient.png');
-	background-repeat: repeat-x;
 	height: 100%;
+	background-size:100% 100%;
+	background-repeat:no-repeat;
 }
 #desno-okno .sredina {
 width: 300px;
 float: left;
 	background-image: url('../images/gradient.png');
-	background-repeat: repeat-x;
 	height: 100%;
+	background-size:100% 100%;
+	background-repeat:no-repeat;
 }
 #glavno-okno, #desno-okno {
 top: 0;

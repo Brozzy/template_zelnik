@@ -150,9 +150,11 @@ else
 
 		      if (stickyTop < windowTop){
 		        $('.sticky').css({ position: 'fixed',top: '10px'});
+				$('.body-background').css({ position: 'fixed',bottom: '0px'});
 		      }
 		      else {
-		        $('.sticky').css({ position: 'absolute',top: '187px'});
+		        $('.sticky').css({ position: 'absolute',top: '200px'});
+				$('.body-background').css({ position: 'absolute',bottom: '-200px'});
 		      }
 
 		    });
@@ -162,9 +164,19 @@ else
 		  
 		 // višina okna 
 		 $(window.onresize = function() {
-		$(".body-background").css("height", (window.innerHeight - 210) + "px");
-		$(".container").css("height", (window.innerHeight - 210) + "px");
+		$(".body-background").css("height", (window.innerHeight) + "px");
+		$(".container").css("height", (window.innerHeight) + "px");
 		
+		var element = document.getElementById('body'),
+			style = window.getComputedStyle(element),
+			sirinaBody = parseInt(style.getPropertyValue('max-width'));
+		
+		if (window.innerWidth < sirinaBody) {
+		$("#leva-reklama").css("display", "none");
+		}
+		else {
+		$("#leva-reklama").css("display", "block");
+		}
 		//skrolanje
 		$(function() {
     $('.content-area').jScrollPane();
@@ -199,19 +211,21 @@ $('.jspScrollable').mouseleave(function(){
 		<div class="header sticky">				
 			<jdoc:include type="modules" name="position-1" />
 			<div class="home">
-				<?php echo '<a href="'.$this->baseurl .'">' ?> 
-				<img src='templates/zelnik/images/home.png' alt='Home'> </a> 
+				<?php echo '<a href="'.$this->baseurl .'">'.'<img src="'.$this->baseurl .'/templates/zelnik/images/home.png" alt="Home"> </a>'; ?> 
 			</div>
 			<div class="social">
-				<div class="fb">
-					<a href="https://www.facebook.com/zelnik.net" target="_blank"><img /></a>
-				</div>	
-				<div class="twitter">
-				<a href="https://twitter.com/zelniknet" target="_blank"><img /></a>
+				<div> 
+					<div style="float: left; z-index:1000;">
+						<a rel="nofollow" href="https://www.facebook.com/zelnik.net" target="_blank"><img style="width: 20px; height: 20px; margin:2px;" <?php echo 'src="'.$this->baseurl .'/templates/zelnik/images/fb_button.png"'; ?> alt="Facebook" title="Sledite nam na Facebooku"></a>
+					</div>
+					<div style="float: left; z-index:1000;">
+						<a rel="nofollow" href="https://twitter.com/zelniknet" target="_blank"><img style=" width: 20px; height: 20px; margin:2px;" <?php echo 'src="'.$this->baseurl .'/templates/zelnik/images/twitter_button.png"'; ?> alt="Twitter" title="Sledite nam na Twitterju"></a>
+					</div>
+					<div style="float: left; z-index:1000;">
+						<a rel="nofollow" <?php echo 'href="'.$this->baseurl .'/index.php?format=feed&type=rss"'; ?> target="_blank"><img style=" width: 20px; height: 20px; margin:2px;" <?php echo 'src="'.$this->baseurl .'/templates/zelnik/images/rss_button.png"'; ?> alt="Rss" title="Pregled RSS spletne strani"></a>
+					</div>
 				</div>
-				<div class="rss">
-				<a href="http://www.zelnik.net/beta/index.php?format=feed&type=rss" target="_blank"><img /></a>
-				</div>
+			<jdoc:include type="modules" name="position-0" />	
 			</div>
 			<div class="vrh-levi">
 			<div class="vogal-levi"></div>
@@ -227,7 +241,7 @@ $('.jspScrollable').mouseleave(function(){
 	</div>	
 	<!-- Body -->
 	<div class="body-background"></div>	
-	<div class="body">		
+	<div id="body" class="body">		
 		<div id="leva-reklama"></div>
 		<div class="container">
 			<div id="glavno-okno" class="sticky">
