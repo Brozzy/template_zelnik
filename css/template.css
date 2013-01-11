@@ -189,15 +189,19 @@ width: 100%;
 z-index: 1000;
 }
 .logo {
-text-align: center;
+*text-align: center;
 padding-top: 40px;
 padding-bottom: 40px;
+padding-left: 295px;
+z-index: 5;
+background: #397EC3;
+height: 120px
 }
 .header .sticky {
 background: #397ec3;
 padding-top: 10px;
 position: absolute;
-top: 187px;
+top: 200px;
 z-index: 2;
 margin-top: -10px;
 }
@@ -258,7 +262,7 @@ float: right;
 }
 .container {
 width: 960px;
-margin: 60px auto auto auto;
+margin: 0 auto auto auto;
 height: 800px;
 }
 #content {
@@ -390,7 +394,7 @@ float: left;
 top: 0;
 height: 100%;
 position: absolute;
-top: 187px;
+top: 200px;
 margin-top: 60px
 }
 #desno-okno {
@@ -402,6 +406,7 @@ margin-left: 620px
 margin-right: auto;
 margin-left: auto;
 max-width: 1300px;
+margin-top: 60px;
 }
 #element {
 position: fixed;

@@ -156,7 +156,16 @@ else
 		        $('.sticky').css({ position: 'absolute',top: '200px'});
 				$('.body-background').css({ position: 'absolute',bottom: '-200px'});
 		      }
-
+		      if (window.innerHeight > 900){
+		        $('.sticky').css({ position: 'fixed',top: '200px'});
+				$('.body-background').css({ position: 'fixed',bottom: '-200px'});
+				$('.logo').css({ position: 'fixed', top: 0 });
+				$('.body').css({ margin: '260px auto auto auto' });
+		      }
+			  else {
+			  $('.logo').css({ position: 'relative'});
+			  $('.body').css({ margin: '60px auto auto auto' });
+			  }
 		    });
 		  }
 		  });
