@@ -221,7 +221,8 @@ background: linear-gradient(to bottom, rgba(255,254,250,0.15) 0%,rgba(254,251,24
 	text-align: center;
 	display: block;
 	margin: 0;
-	padding: 3px 0;
+	padding: 0;
+	font-weight: bold;
 }
 .header ul.menu li {
 
@@ -233,16 +234,22 @@ background: linear-gradient(to bottom, rgba(255,254,250,0.15) 0%,rgba(254,251,24
 	{
 	color: #fff;
 	font-size: 16px;	
-	font-weight: bold;
 	text-decoration: none;
 	display: inline-block;
 	margin: 0;
 	position: relative;
-	padding: 3px 20px 3px 20px;
+	padding: 6px 20px 6px 20px;
 	font-family: Arial;
 	}
+.header .menu li:hover a
+	{
+	background-color: #73A458;
+	}
+.header .menu li:hover li a
+{
+background-color: transparent;
+}
 .header ul.nav {
-		*background-image: url('../images/home.png');
 		height: auto;
 		float: none;
 		width: 100%;
@@ -250,8 +257,47 @@ background: linear-gradient(to bottom, rgba(255,254,250,0.15) 0%,rgba(254,251,24
 li {
 	line-height: 18px;
 }
+.header .nav-child {
+	position: absolute;
+	left: 0;
+	z-index: 1000;
+	display: none;
+	float: left;
+	min-width: 160px;
+	padding: 5px 0;
+	margin: 0;
+	list-style: none;
+	background-color: #73A458;
+	-webkit-border-radius: 0 0 15px 15px;
+	-moz-border-radius: 0 0 15px 15px;
+	border-radius: 0 0 15px 15px;
+	font-weight: normal;
+	border-top: 10px solid #397EC3;
+	
+}
+.header .nav-child a {
+	display: block;
+	padding: 3px 20px;
+	clear: both;
+	font-size: 13px;
+	line-height: 18px;
+	color: #333;
+	white-space: nowrap;
+}
+.header .nav > li {
+	position: relative;
+}
+.header .nav > li:hover > .nav-child,
+.header .nav > li > a:focus + .nav-child {
+	display: block;
+}
+
+.header .nav-child li > a:hover,
+.header .nav-child li > a:focus,
+.header .nav-child:hover > a {
+	text-decoration: none;}
 .home {
-margin: -29px auto 4px 49px;
+margin: -26px auto 6px 50px;
 }
 .social {
 margin: -30px 15px auto auto;
