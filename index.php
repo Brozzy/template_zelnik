@@ -225,13 +225,13 @@ $('.jspScrollable').mouseleave(function(){
 			<div class="social">
 				<div> 
 					<div style="float: left; z-index:1000;">
-						<a rel="nofollow" href="https://www.facebook.com/zelnik.net" target="_blank"><img style="width: 9px; height: 18px; margin:5px;" <?php echo 'src="'.$this->baseurl .'/templates/zelnik/images/fb_button.png"'; ?> alt="Facebook" title="Sledite nam na Facebooku"></a>
+						<a rel="nofollow" href="https://www.facebook.com/zelnik.net" target="_blank"><img style="width: 8px; height: 16px; margin:5px;" <?php echo 'src="'.$this->baseurl .'/templates/zelnik/images/fb_button.png"'; ?> alt="Facebook" title="Sledite nam na Facebooku"></a>
 					</div>
 					<div style="float: left; z-index:1000;">
-						<a rel="nofollow" href="https://twitter.com/zelniknet" target="_blank"><img style=" width: 14px; height: 18px; margin:5px;" <?php echo 'src="'.$this->baseurl .'/templates/zelnik/images/twitter_button.png"'; ?> alt="Twitter" title="Sledite nam na Twitterju"></a>
+						<a rel="nofollow" href="https://twitter.com/zelniknet" target="_blank"><img style=" width: 12px; height: 16px; margin:5px;" <?php echo 'src="'.$this->baseurl .'/templates/zelnik/images/twitter_button.png"'; ?> alt="Twitter" title="Sledite nam na Twitterju"></a>
 					</div>
 					<div style="float: left; z-index:1000;">
-						<a rel="nofollow" <?php echo 'href="'.$this->baseurl .'/index.php?format=feed&type=rss"'; ?> target="_blank"><img style=" width: 18px; height: 18px; margin:5px;" <?php echo 'src="'.$this->baseurl .'/templates/zelnik/images/rss_button.png"'; ?> alt="Rss" title="Pregled RSS spletne strani"></a>
+						<a rel="nofollow" <?php echo 'href="'.$this->baseurl .'/index.php?format=feed&type=rss"'; ?> target="_blank"><img style=" width: 16px; height: 16px; margin:5px;" <?php echo 'src="'.$this->baseurl .'/templates/zelnik/images/rss_button.png"'; ?> alt="Rss" title="Pregled RSS spletne strani"></a>
 					</div>
 				</div>
 			<jdoc:include type="modules" name="position-0" />	

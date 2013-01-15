@@ -301,11 +301,11 @@ li {
 .header .nav-child:hover > a {
 	text-decoration: none;}
 .home {
-margin: -26px auto 6px 50px;
+margin: -25px auto 6px 50px;
 }
 .social {
-margin: -30px 15px auto auto;
-width: 73px;
+margin: -29px 15px auto auto;
+width: 68px;
 height: 25px;
 text-align: right;
 float: right;
