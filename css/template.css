@@ -329,6 +329,16 @@ bottom: 30px;
 	height: 600px;
 	margin-right: 10px;
 }
+#desna-reklama {
+background-image: url('../images/advertise-300x250.png');
+float: left;
+position: fixed;
+bottom: 30px;
+	width: 300px;
+	height: 250px;
+	margin-right: auto;
+margin-left: 640px;
+}
 .vrh-levi {
 padding: 10px 10px 0 0;
 width: 610px;

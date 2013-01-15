@@ -270,7 +270,8 @@ $('.jspScrollable').mouseleave(function(){
 				<jdoc:include type="component" />
 				<jdoc:include type="modules" name="position-2" style="none" />
 				<!-- End Content -->
-			</div> 	
+			</div> 
+			<div id="desna-reklama"></div>
 		</div>
 		<div id="element"></div>
 	</div>
